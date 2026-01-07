@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TrackIn</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Login_account">Login to your Account</string>
+    <string name="donhave_accnt">Don\'t have an account?</string>
+    <string name="Sign_Up">Sign Up</string>
+    <string name="Create_account">Create your Account</string>
+    <string name="already_account">Already have account?</string>
+    <string name="Sign_In">Sign In</string>
+    <string name="markintime">Mark In At :</string>
+    <string name="markoutat">Mark Out At :</string>
+    <string name="collegehours">Total Spend hours:</string>
+    <string name="Submit">Submit</string>
+    <string name="cannot_upload_image">Can not upload Image</string>
+    <string name="apply">Apply</string>
+    <string name="radius">Radius</string>
+    <string name="set_loc">Set Your Location Area</string>
+</resources>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".staff.FillDetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_147sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/dash_img"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_16sdp"
+            android:text="Visitor Form"
+            android:id="@+id/tvName"
+            android:paddingVertical="@dimen/_10sdp"
+
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_medium"
+            android:layout_margin="@dimen/_14sdp"
+            />
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:tint="@color/primaryColor"
+            android:background="@color/white"
+            android:padding="@dimen/_8sdp"
+
+            android:src="@drawable/outline_arrow_back_ios_24"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_20sdp"
+            android:id="@+id/cardToday"
+            app:cardCornerRadius="@dimen/_8sdp"
+            android:layout_margin="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_20sdp"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Personal Details"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/textpersonaltitle"
+                />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:hint="Name"
+                android:elevation="1dp"
+                android:singleLine="true"
+                android:inputType="textPersonName"
+                android:id="@+id/etName"
+                android:paddingHorizontal="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textpersonaltitle"
+                android:background="@drawable/edit_bg"
+                />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Email"
+                    android:elevation="1dp"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/etEmail"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etName"
+                    android:background="@drawable/edit_bg"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Contact"
+                    android:elevation="1dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:id="@+id/etContact"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etEmail"
+                    android:background="@drawable/edit_bg"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Address"
+                    android:elevation="1dp"
+                    android:maxLines="2"
+                    android:id="@+id/etAddress"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etContact"
+                    android:background="@drawable/edit_bg"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Vehicle Number(optional)"
+                    android:elevation="1dp"
+                    android:maxLines="1"
+                    android:maxLength="12"
+                    android:id="@+id/etVehcleNumber"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etAddress"
+                    android:background="@drawable/edit_bg"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Your Details"
+                    android:textSize="@dimen/_14sdp"
+                    android:id="@+id/textuploaddetails"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:layout_constraintTop_toBottomOf="@id/etVehcleNumber"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Proof Id"
+                    android:elevation="1dp"
+                    android:singleLine="true"
+                    android:id="@+id/etProofId"
+                    android:textSize="@dimen/_12sdp"
+
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etYourImg"
+                    android:background="@drawable/edit_bg"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Vehicle Image(optional)"
+                    android:elevation="1dp"
+                    android:singleLine="true"
+                    android:id="@+id/etVehicleId"
+                    android:textSize="@dimen/_12sdp"
+
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etProofId"
+                    android:background="@drawable/edit_bg"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Your Image"
+                    android:elevation="1dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/etYourImg"
+
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textuploaddetails"
+                    android:background="@drawable/edit_bg"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Notes(optional)"
+                    android:elevation="1dp"
+                    android:singleLine="true"
+                    android:id="@+id/etNotes"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etNumberOfPeople"
+                    android:background="@drawable/edit_bg"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visit To"
+                    android:textSize="@dimen/_14sdp"
+                    android:id="@+id/textWhom"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:layout_constraintTop_toBottomOf="@id/etReason"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:elevation="1dp"
+
+                    android:id="@+id/spinnerWhomtoMeet"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@id/textWhom"
+                    android:background="@drawable/edit_bg"
+                    />
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other Details"
+                    android:textSize="@dimen/_14sdp"
+                    android:id="@+id/textOtherDetails"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:layout_constraintTop_toBottomOf="@id/etVehicleId"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="People Count"
+                    android:elevation="1dp"
+                    android:singleLine="true"
+                    android:id="@+id/etNumberOfPeople"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textOtherDetails"
+                    android:background="@drawable/edit_bg"
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="Visit Reason"
+                    android:elevation="1dp"
+                    android:singleLine="true"
+                    android:id="@+id/etReason"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etNotes"
+                    android:background="@drawable/edit_bg"
+                    />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="@string/Submit"
+                    android:id="@+id/btnSubmit"
+                    app:cornerRadius="@dimen/_8sdp"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerWhomtoMeet"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

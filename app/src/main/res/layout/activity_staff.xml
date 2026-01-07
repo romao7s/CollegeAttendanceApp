@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".staff.StaffActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_147sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/dash_img"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="@dimen/_16sdp"
+                android:text="Name"
+                android:id="@+id/tvName"
+                android:textColor="@color/white"
+                android:fontFamily="@font/inter_medium"
+                android:layout_margin="@dimen/_10sdp"
+                />
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_29sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivLogout"
+                android:src="@drawable/img_2"
+                android:id="@+id/ivQr"
+                android:visibility="gone"
+                android:layout_margin="@dimen/_10sdp"
+                />
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/logout_svgrepo_com__1_"
+                android:id="@+id/ivLogout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="@color/white"
+                android:padding="@dimen/_20sdp"
+                android:id="@+id/cardToday"
+                app:cardCornerRadius="@dimen/_8sdp"
+                android:layout_margin="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_20sdp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="@dimen/_26sdp"
+                        android:id="@+id/date"
+                        android:fontFamily="@font/inter_bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/date"
+                        app:layout_constraintStart_toEndOf="@id/date"
+                        android:text="th"
+                        android:fontFamily="@font/inter_medium"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wednesday"
+                        android:textSize="@dimen/_20sdp"
+                        android:id="@+id/day"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/inter_bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/date"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="August 2019"
+                        android:textSize="@dimen/_12sdp"
+                        android:id="@+id/fulldate"
+                        android:textColor="@color/grey"
+                        app:layout_constraintTop_toBottomOf="@id/day"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/inter_bold"
+                        app:layout_constraintStart_toEndOf="@id/date"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This week status"
+                        android:textSize="@dimen/_12sdp"
+                        android:id="@+id/fulltext"
+                        android:textColor="@color/grey"
+                        app:layout_constraintTop_toBottomOf="@id/fulldate"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/inter_medium"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fulltext"
+                        android:padding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="70dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="17dp"
+                                android:text="M"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:textSize="14sp"
+                                android:textColor="#808080"
+                                android:layout_marginBottom="6dp"/>
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:id="@+id/ivMonday"
+                                android:src="@drawable/ic_present"
+                                android:background="@drawable/bg_present_circle"
+                                android:padding="8dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="70dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="15dp"
+                                android:text="T"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:textSize="14sp"
+                                android:textColor="#808080"
+                                android:layout_marginBottom="6dp"/>
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                android:id="@+id/ivTuesday"
+                                android:padding="@dimen/_7sdp"
+                                android:src="@drawable/letter_english_a_svgrepo_com"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/bg_absent_circle"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="50dp"
+                            android:layout_height="70dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="15dp"
+                                android:text="W"
+                                android:layout_marginStart="@dimen/_2sdp"
+
+                                android:textSize="14sp"
+                                android:textColor="#808080"
+                                android:layout_marginBottom="6dp"/>
+
+                            <ImageView
+
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:id="@+id/ivWednesday"
+                                android:src="@drawable/ic_present"
+                                android:background="@drawable/bg_present_circle"
+                                android:padding="8dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="70dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="15dp"
+                                android:text="Th"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:textSize="14sp"
+                                android:textColor="#808080"
+                                android:layout_marginBottom="6dp"/>
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:id="@+id/ivThursday"
+                                android:padding="8dp"
+                                android:background="@drawable/bg_empty_circle"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="70dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="15dp"
+                                android:text="Fr"
+                                android:textSize="14sp"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:textColor="#808080"
+                                android:layout_marginBottom="6dp"/>
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:id="@+id/ivFriday"
+                                android:padding="8dp"
+                                android:background="@drawable/bg_empty_circle"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_20sdp"
+
+                app:cardCornerRadius="@dimen/_8sdp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/cardToday">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:id="@+id/layoutPresent"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/cpbPresent"
+                            android:layout_width="@dimen/_65sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_gravity="center"
+                            app:cpb_background_progressbar_color="#b6bbd8"
+                            app:cpb_background_progressbar_width="8dp"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="@color/primaryColor"
+                            app:cpb_progressbar_width="10dp"
+                            app:cpb_round_border="true" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/txtPresentPercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="100dp"
+                        android:background="#CCCCCC"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/layoutPresent"
+                        app:layout_constraintTop_toTopOf="@id/layoutPresent"
+                        app:layout_constraintBottom_toBottomOf="@id/layoutPresent"/>
+
+                    <FrameLayout
+                        android:id="@+id/layoutAbsent"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        app:layout_constraintStart_toEndOf="@id/layoutPresent"
+                        app:layout_constraintEnd_toStartOf="@id/layoutHolidays"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="12dp">
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/cpbAbsent"
+                            android:layout_width="@dimen/_65sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_gravity="center"
+                            app:cpb_background_progressbar_color="#b6bbd8"
+                            app:cpb_background_progressbar_width="8dp"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="@color/primaryColor"
+                            app:cpb_progressbar_width="10dp"
+                            app:cpb_round_border="true" />
+
+                        <TextView
+                            android:id="@+id/txtAbsentPercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="100dp"
+                        android:background="#CCCCCC"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/layoutAbsent"
+                        app:layout_constraintTop_toTopOf="@id/layoutAbsent"
+                        app:layout_constraintBottom_toBottomOf="@id/layoutAbsent"/>
+
+                    <FrameLayout
+                        android:id="@+id/layoutHolidays"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/layoutAbsent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="8dp">
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/cpbHolidays"
+                            android:layout_width="@dimen/_65sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_gravity="center"
+                            app:cpb_background_progressbar_color="#b6bbd8"
+                            app:cpb_background_progressbar_width="8dp"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="@color/primaryColor"
+                            app:cpb_progressbar_width="8dp"
+                            app:cpb_round_border="true" />
+
+
+                        <TextView
+                            android:id="@+id/txtHolidayPercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/labelPresent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Present"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/layoutPresent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutPresent"
+                        app:layout_constraintStart_toStartOf="@id/layoutPresent"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/labelAbsent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Absent"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/layoutAbsent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutAbsent"
+                        app:layout_constraintStart_toStartOf="@id/layoutAbsent"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/labelHoliday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Holidays"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/layoutHolidays"
+                        app:layout_constraintTop_toBottomOf="@id/layoutHolidays"
+                        app:layout_constraintStart_toStartOf="@id/layoutHolidays"
+                        android:layout_marginTop="8dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cardProgress"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Today's Activity"
+                android:id="@+id/tvactivity"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCheckIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:layout_constraintTop_toBottomOf="@id/tvactivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:background="@drawable/ic_checkout"
+                        android:src="@drawable/in_svgrepo_com" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:id="@+id/tvCheckInTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check In"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCheckInAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  -- --"
+                            android:maxLines="2"
+                            android:textColor="#6E6E6E"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvCheckInLatLong"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40.7128° N, 74.0060° W"
+                            android:textColor="#9C9C9C"
+                            android:visibility="gone"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvCheckInTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="__: __"
+                        android:layout_gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCheckOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@id/cardCheckTime"
+                app:layout_constraintTop_toBottomOf="@id/cardCheckIn">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/out_bg"
+                        android:padding="8dp"
+                        android:src="@drawable/out_svgrepo_com"
+                        app:tint="@color/black" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:id="@+id/tvCheckOutTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check Out"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCheckOutAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:text="  -- --"
+                            android:textColor="#6E6E6E"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvCheckOutTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="__:__"
+                        android:layout_gravity="center"
+
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey"
+                android:id="@+id/view"
+                android:layout_marginBottom="@dimen/_4sdp"
+                app:layout_constraintBottom_toTopOf="@id/cardCheckTime"
+                android:layout_marginVertical="@dimen/_5sdp"
+                />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCheckTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintTop_toBottomOf="@id/cardCheckOut"
+                app:cardElevation="1dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ic_checkout"
+                        android:padding="8dp"
+                        android:src="@drawable/time_svgrepo_com"
+                        app:tint="@color/black" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:id="@+id/tvCheckTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Working Hours"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvtotaltime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="  -- --"
+                            android:textColor="#6E6E6E"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--    <androidx.cardview.widget.CardView-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        app:layout_constraintTop_toBottomOf="@id/cardMarkOuts"-->
+            <!--        android:backgroundTint="@color/white"-->
+            <!--        android:layout_marginTop="@dimen/_12sdp"-->
+            <!--        android:padding="@dimen/_10sdp"-->
+            <!--        app:cardCornerRadius="@dimen/_8sdp"-->
+            <!--        android:id="@+id/cardHours"-->
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        android:layout_marginBottom="@dimen/_20sdp"-->
+            <!--        android:layout_marginHorizontal="@dimen/_20sdp"-->
+            <!--        >-->
+            <!--        <LinearLayout-->
+            <!--            android:orientation="vertical"-->
+            <!--            android:padding="16dp"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content">-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvMarkInTime"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="09:00 AM"-->
+
+            <!--                android:layout_gravity="center"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:textSize="18sp"/>-->
+
+            <!--            <ProgressBar-->
+            <!--                android:id="@+id/progressAttendance"-->
+            <!--                style="?android:attr/progressBarStyleHorizontal"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="20dp"-->
+            <!--                android:progress="0"-->
+            <!--                android:max="8"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                />-->
+
+            <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;                android:id="@+id/tvDate"&ndash;&gt;-->
+            <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;                android:text="18-11-2025"&ndash;&gt;-->
+            <!--&lt;!&ndash;                android:textSize="15sp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                android:layout_gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;                android:textColor="#777"/>&ndash;&gt;-->
+            <!--        </LinearLayout>-->
+            <!--&lt;!&ndash;        <androidx.recyclerview.widget.RecyclerView&ndash;&gt;-->
+            <!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;            android:paddingVertical="@dimen/_30sdp"&ndash;&gt;-->
+            <!--&lt;!&ndash;            android:paddingHorizontal="@dimen/_10sdp"&ndash;&gt;-->
+            <!--&lt;!&ndash;            android:id="@+id/recyclerHours"&ndash;&gt;-->
+            <!--&lt;!&ndash;            />&ndash;&gt;-->
+
+            <!--    </androidx.cardview.widget.CardView>-->
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
