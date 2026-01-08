@@ -76,7 +76,7 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBpfZ7UKwP2KOuoI1Mv7YG1OO76g-lNtqA" /> <!-- AIzaSyCkHSqEVozNtOE0gf3erd8lfIfOaAb_tZk -->
+            android:value="" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="attendance_tracking" />
